@@ -110,6 +110,7 @@ class RowIterator implements IteratorInterface
         $this->xmlProcessor->registerCallback(self::XML_NODE_TABLE, XMLProcessor::NODE_TYPE_END, [$this, 'processTableEndingNode']);
     }
 
+    #[\ReturnTypeWillChange]
     /**
      * Rewind the Iterator to the first element.
      * NOTE: It can only be done once, as it is not possible to read an XML file backwards.
@@ -136,6 +137,7 @@ class RowIterator implements IteratorInterface
         $this->next();
     }
 
+    #[\ReturnTypeWillChange]
     /**
      * Checks if current position is valid
      * @see http://php.net/manual/en/iterator.valid.php
@@ -147,6 +149,7 @@ class RowIterator implements IteratorInterface
         return (!$this->hasReachedEndOfFile);
     }
 
+    #[\ReturnTypeWillChange]
     /**
      * Move forward to next element. Empty rows will be skipped.
      * @see http://php.net/manual/en/iterator.next.php
@@ -350,6 +353,7 @@ class RowIterator implements IteratorInterface
         );
     }
 
+    #[\ReturnTypeWillChange]
     /**
      * Return the current element, from the buffer.
      * @see http://php.net/manual/en/iterator.current.php
@@ -361,6 +365,7 @@ class RowIterator implements IteratorInterface
         return $this->rowBuffer;
     }
 
+    #[\ReturnTypeWillChange]
     /**
      * Return the key of the current element
      * @see http://php.net/manual/en/iterator.key.php
