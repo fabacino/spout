@@ -78,6 +78,7 @@ class RowIterator implements IteratorInterface
         $this->globalFunctionsHelper = $globalFunctionsHelper;
     }
 
+    #[\ReturnTypeWillChange]
     /**
      * Rewind the Iterator to the first element
      * @see http://php.net/manual/en/iterator.rewind.php
@@ -108,6 +109,7 @@ class RowIterator implements IteratorInterface
         $this->globalFunctionsHelper->fseek($this->filePointer, $byteOffsetToSkipBom);
     }
 
+    #[\ReturnTypeWillChange]
     /**
      * Checks if current position is valid
      * @see http://php.net/manual/en/iterator.valid.php
@@ -119,6 +121,7 @@ class RowIterator implements IteratorInterface
         return ($this->filePointer && !$this->hasReachedEndOfFile);
     }
 
+    #[\ReturnTypeWillChange]
     /**
      * Move forward to next element. Reads data for the next unprocessed row.
      * @see http://php.net/manual/en/iterator.next.php
@@ -218,6 +221,7 @@ class RowIterator implements IteratorInterface
         return (\is_array($lineData) && \count($lineData) === 1 && $lineData[0] === null);
     }
 
+    #[\ReturnTypeWillChange]
     /**
      * Return the current element from the buffer
      * @see http://php.net/manual/en/iterator.current.php
@@ -229,6 +233,7 @@ class RowIterator implements IteratorInterface
         return $this->rowBuffer;
     }
 
+    #[\ReturnTypeWillChange]
     /**
      * Return the key of the current element
      * @see http://php.net/manual/en/iterator.key.php
