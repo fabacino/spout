@@ -72,6 +72,7 @@ class SheetIterator implements IteratorInterface
         $this->activeSheetName = $settingsHelper->getActiveSheetName($filePath);
     }
 
+    #[\ReturnTypeWillChange]
     /**
      * Rewind the Iterator to the first element
      * @see http://php.net/manual/en/iterator.rewind.php
@@ -125,6 +126,7 @@ class SheetIterator implements IteratorInterface
         return $sheetsVisibility;
     }
 
+    #[\ReturnTypeWillChange]
     /**
      * Checks if current position is valid
      * @see http://php.net/manual/en/iterator.valid.php
@@ -136,6 +138,7 @@ class SheetIterator implements IteratorInterface
         return $this->hasFoundSheet;
     }
 
+    #[\ReturnTypeWillChange]
     /**
      * Move forward to next element
      * @see http://php.net/manual/en/iterator.next.php
@@ -151,6 +154,7 @@ class SheetIterator implements IteratorInterface
         }
     }
 
+    #[\ReturnTypeWillChange]
     /**
      * Return the current element
      * @see http://php.net/manual/en/iterator.current.php
@@ -208,6 +212,7 @@ class SheetIterator implements IteratorInterface
             true;
     }
 
+    #[\ReturnTypeWillChange]
     /**
      * Return the key of the current element
      * @see http://php.net/manual/en/iterator.key.php
