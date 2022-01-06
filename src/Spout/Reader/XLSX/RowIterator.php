@@ -130,6 +130,7 @@ class RowIterator implements IteratorInterface
         return \ltrim($sheetDataXMLFilePath, '/');
     }
 
+    #[\ReturnTypeWillChange]
     /**
      * Rewind the Iterator to the first element.
      * Initializes the XMLReader object that reads the associated sheet data.
@@ -157,6 +158,7 @@ class RowIterator implements IteratorInterface
         $this->next();
     }
 
+    #[\ReturnTypeWillChange]
     /**
      * Checks if current position is valid
      * @see http://php.net/manual/en/iterator.valid.php
@@ -168,6 +170,7 @@ class RowIterator implements IteratorInterface
         return (!$this->hasReachedEndOfFile);
     }
 
+    #[\ReturnTypeWillChange]
     /**
      * Move forward to next element. Reads data describing the next unprocessed row.
      * @see http://php.net/manual/en/iterator.next.php
@@ -368,6 +371,7 @@ class RowIterator implements IteratorInterface
         return $cell;
     }
 
+    #[\ReturnTypeWillChange]
     /**
      * Return the current element, either an empty row or from the buffer.
      * @see http://php.net/manual/en/iterator.current.php
@@ -393,6 +397,7 @@ class RowIterator implements IteratorInterface
         return $rowToBeProcessed;
     }
 
+    #[\ReturnTypeWillChange]
     /**
      * Return the key of the current element. Here, the row index.
      * @see http://php.net/manual/en/iterator.key.php
