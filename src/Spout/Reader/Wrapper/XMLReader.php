@@ -76,6 +76,7 @@ class XMLReader extends \XMLReader
         return $doesFileExists;
     }
 
+    #[\ReturnTypeWillChange]
     /**
      * Move to next node in document
      * @see \XMLReader::read
@@ -111,6 +112,7 @@ class XMLReader extends \XMLReader
         return $wasReadSuccessful;
     }
 
+    #[\ReturnTypeWillChange]
     /**
      * Move cursor to next node skipping all subtrees
      * @see \XMLReader::next
